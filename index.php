@@ -36,7 +36,78 @@ $hotels = [
         'vote' => 2,
         'distance_to_center' => 50,
     ],
+    [
+        'name' => 'Hotel Paradiso',
+        'description' => 'Hotel Paradiso Descrizione',
+        'parking' => true,
+        'vote' => 3,
+        'distance_to_center' => 3.2,
+    ],
+    [
+        'name' => 'Hotel Mareblu',
+        'description' => 'Hotel Mareblu Descrizione',
+        'parking' => false,
+        'vote' => 4,
+        'distance_to_center' => 0.8,
+    ],
+    [
+        'name' => 'Hotel Sole',
+        'description' => 'Hotel Sole Descrizione',
+        'parking' => true,
+        'vote' => 5,
+        'distance_to_center' => 15.0,
+    ],
+    [
+        'name' => 'Hotel Luna',
+        'description' => 'Hotel Luna Descrizione',
+        'parking' => false,
+        'vote' => 2,
+        'distance_to_center' => 1.5,
+    ],
+    [
+        'name' => 'Hotel Stella',
+        'description' => 'Hotel Stella Descrizione',
+        'parking' => true,
+        'vote' => 4,
+        'distance_to_center' => 8.4,
+    ],
+    [
+        'name' => 'Hotel Aquamarina',
+        'description' => 'Hotel Aquamarina Descrizione',
+        'parking' => false,
+        'vote' => 3,
+        'distance_to_center' => 4.3,
+    ],
+    [
+        'name' => 'Hotel Gardenia',
+        'description' => 'Hotel Gardenia Descrizione',
+        'parking' => true,
+        'vote' => 5,
+        'distance_to_center' => 12.5,
+    ],
+    [
+        'name' => 'Hotel Primavera',
+        'description' => 'Hotel Primavera Descrizione',
+        'parking' => true,
+        'vote' => 4,
+        'distance_to_center' => 6.7,
+    ],
+    [
+        'name' => 'Hotel Sereno',
+        'description' => 'Hotel Sereno Descrizione',
+        'parking' => false,
+        'vote' => 1,
+        'distance_to_center' => 0.5,
+    ],
+    [
+        'name' => 'Hotel Relax',
+        'description' => 'Hotel Relax Descrizione',
+        'parking' => true,
+        'vote' => 3,
+        'distance_to_center' => 3.0,
+    ],
 ];
+
 
 ?>
 <!DOCTYPE html>
@@ -49,7 +120,7 @@ $hotels = [
 </head>
 <body class="bg-success text-light">
     <div class="container d-flex align-items-center  flex-column p-5">
-        <h1>Boolking</h1>
+        <h1 class="fw-bold">Boolking</h1>
         
         <table class="table table-striped mt-4">
             <thead>
@@ -87,7 +158,7 @@ $hotels = [
         <form action="" method="GET">
             <div class="mb-3">
                 <label for="parkingCheckbox" class="form-label">Filter by Parking</label>
-                <input type="checkbox" id="parkingCheckbox" name="parking" value="1" <?php if(isset($_GET['parking']) && $_GET['parking'] == '1'); ?>>
+                <input type="checkbox" id="parkingCheckbox" name="parking" value="1" <?php if(isset($_GET['parking']) && $_GET['parking'] == '1') echo 'checked'; ?>>
             </div>
             <div class="mb-3">
                 <label for="ratingInput" class="form-label">Filter by Rating (vote)</label>
