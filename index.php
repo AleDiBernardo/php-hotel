@@ -87,7 +87,7 @@ $hotels = [
         <form action="" method="GET">
             <div class="mb-3">
                 <label for="parkingCheckbox" class="form-label">Filter by Parking</label>
-                <input type="checkbox" id="parkingCheckbox" name="parking" value="1" <?php if(isset($_GET['parking']) && $_GET['parking'] == '1') echo 'checked'; ?>>
+                <input type="checkbox" id="parkingCheckbox" name="parking" value="1" <?php if(isset($_GET['parking']) && $_GET['parking'] == '1'); ?>>
             </div>
             <div class="mb-3">
                 <label for="ratingInput" class="form-label">Filter by Rating (vote)</label>
